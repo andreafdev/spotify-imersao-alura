@@ -1,0 +1,286 @@
+body {
+    background-color: black;
+    font-family: var(--font-dm-sans);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 12px;
+    width: 300px;
+}
+
+.sidebar__navigation {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+}
+
+.sidebar__navigation .logo {
+    background: var(--primary-color);
+    display: flex;
+    border-radius: 8px;
+    padding: 16px 0 0 16px;
+}
+
+.sidebar__navigation .logo img{
+    width: 80px;
+}
+
+.sidebar nav ul {
+    margin-top: 20px;
+    padding: 0 20px 10px 20px;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+}
+
+.sidebar-icon-text {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #b3b3b3;
+    transition: all 200ms ease-in-out;
+
+}
+
+.sidebar-icon__text {
+    margin-left: 10px;
+}
+
+.sidebar-icon-text:hover {
+    color: white;
+}
+
+
+.library {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 4px 8px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: #b3b3b3;
+    font-weight: 600;
+    font-size: 14px;
+    height: 62vh;
+}
+
+.library .library__content {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.library .library__content__button {
+    display: flex;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 20px 10px;
+    border: 0;
+    background: transparent;
+    color: #b3b3b3;
+    text-decoration: none;
+    text-align: center;
+    text-transform: none;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.library .library__content__button:hover {
+    color: white;
+}
+
+.library .library__content__button .fa {
+    font-size: 20px;
+    margin-right: 10px;
+    font-weight: 300;
+    padding-right: 8px;
+}
+
+.fa-plus {
+    position: relative;
+    display: inline-block;
+    margin: 24px 10px;
+    cursor: pointer;
+
+}
+
+.fa-plus .fa-plus__tooltip {
+    visibility: hidden;
+    width: 150px;
+    background-color: #1c1c1c;
+    filter: drop-shadow(0 0 0.75rem black);
+    font-family: var(--font-dm-sans);
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    padding: 8px 5px;
+    border: 6px;
+    border-radius: 5px;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 180%;
+    left: 60%;
+    margin-left: -75px;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.fa-plus:hover {
+    color: white;
+}
+
+.fa-plus:hover .fa-plus__tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.library__playlist {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #242424;
+    color: #b3b3b3;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 10px;
+    margin: 8px 0;
+    padding: 16px 20px;
+}
+
+.library__playlist .library__playlist__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.library__playlist__content .text {
+    color: #fff;
+    padding: 0 0 14px 0;
+}
+
+.library__playlist__content .title {
+    font-weight: 700;
+}
+
+.library__playlist__content .subtitle {
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.library__playlist__content .playlist__content__button {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    color: #000;
+    border: 0;
+    border-radius: 20px;
+    width: 130px;
+    margin-top: 12px;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-decoration: none;
+    text-transform: none;
+    cursor: pointer;
+}
+
+.library__playlist__content .playlist__content__button:hover {
+    transform: scale(1.05);
+}
+
+.library .legal-links {
+    margin: 34px 0;
+    padding: 0 24px;
+    text-align: start;
+}
+
+.library .legal-links .legal-links__content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.library .legal-links a {
+    margin-top: 16px;
+    margin-right: 16px;
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.library .legal-links a:hover {
+    border-bottom: 1px solid #b3b3b3;
+}
+
+.languages .languages__button {
+    align-items: center;
+    width: 170px;
+    padding: 8px;
+    margin: 10px;
+    border:  0.5px solid #878787;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.languages .languages__button:hover {
+    border-color: white;
+    transform: scale(1.06);
+}
+
+.disclaimer-premium {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 15px 40px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgb(171,50,185);
+    background: linear-gradient(90deg, rgba(171,50,185,1) 0%, rgba(94,173,222,1) 60%);
+}
+
+.disclaimer-premium .disclaimer-premium__content__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #fff;
+}
+
+
+.disclaimer-premium__content__text .disclaimer-text {
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.disclaimer-text__title {
+    font-weight: bold;
+}
+
+.disclaimer-premium .disclaimer-premium__content__button {
+    background-color: #fff;
+    border: 0;
+    border-radius: 50px;
+    padding: 14px 30px;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.disclaimer-premium .disclaimer-premium__content__button:hover {
+    transform: scale(1.06);
+}
